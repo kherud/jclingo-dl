@@ -1,0 +1,8 @@
+.idea
+**/.directory
+*.log
+target
+*.txt
+*.gz
+.DS_Store
+*.iml
