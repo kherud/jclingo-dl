@@ -1,10 +1,4 @@
-package org.potassco.clingodl;
-
-import java.util.Collections;
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Handler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+package org.potassco.clingodl.demo;
 
 import org.junit.Test;
 import org.potassco.clingo.ast.Ast;
@@ -14,19 +8,15 @@ import org.potassco.clingo.control.LoggerCallback;
 import org.potassco.clingo.solving.Model;
 import org.potassco.clingo.solving.SolveHandle;
 import org.potassco.clingo.solving.SolveMode;
+import org.potassco.clingodl.Assignment;
+import org.potassco.clingodl.ClingoDLTheory;
 
-public class DemoTest {
+import java.util.Collections;
 
+public class SimpleDemoTest {
 
 	@Test
 	public void testDemo() {
-		Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-		Handler handlerObj = new ConsoleHandler();
-		handlerObj.setLevel(Level.ALL);
-		LOGGER.addHandler(handlerObj);
-		LOGGER.setLevel(Level.ALL);
-		LOGGER.setUseParentHandlers(false);
-
 		String program = "&diff{ x } >= 1. &diff{ y } >= 3.";
 
 		LoggerCallback logger = (code, message) -> System.out.printf("[%s] %s", code.name(), message);

@@ -48,6 +48,9 @@ You can then use this API via Maven:
 </repositories>
 ```
 
+### Usage
+Please have a look at the [demonstration directory (src/test/demo)](src/test/java/org/potassco/clingodl/demo) .
+
 [clingo]: https://potassco.org/clingo/
 [Potassco]: https://potassco.org/
 [home]: https://potassco.org/labs/clingodl/

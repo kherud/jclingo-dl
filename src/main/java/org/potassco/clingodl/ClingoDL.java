@@ -34,7 +34,11 @@ import org.potassco.clingo.theory.Value;
 import org.potassco.clingo.theory.ValueType;
 import org.potassco.clingo.theory.ValueTypeConverter;
 
-public interface ClingoDL extends Library {
+/**
+ * This interface is used by JNA to access the native methods of ClingoDL.
+ * It is not meant to be used by 3rd party libraries, refer to {@link ClingoDLTheory} instead.
+ */
+interface ClingoDL extends Library {
     ClingoDL INSTANCE = initLibrary();
 
     static ClingoDL initLibrary() {
